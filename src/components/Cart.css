@@ -1,0 +1,129 @@
+.cart {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.cart_title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #666;
+  margin: 0 0 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 1px #eee;
+}
+
+/* CART ITEM STYLES */
+.cart_item {
+  height: auto;
+  max-height: 265px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* left side styles */
+.cart_item-left {
+  width: 50%;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* center item styles */
+.cart_item-quantity {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 0.8);
+  padding: 1rem 1rem 1rem 0;
+}
+
+.cart_item-center input {
+  display: inline-block;
+  width: 60px;
+  padding: 0.5rem;
+  margin: 0 0 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  border: solid 1px #777;
+}
+.cart_item-center input:focus {
+  border-color: rgba(30, 144, 255, 0.6);
+}
+
+/* item name styles */
+.cart_item-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 1rem;
+}
+
+/* item price styles */
+.cart_item-price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(30, 144, 250, 0.8);
+  margin-bottom: 1.25rem;
+}
+
+/* remove item styles */
+.cart_remove-item {
+  display: inline-block;
+  width: 80px;
+  background-color: white;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  color: rgba(51, 51, 51, 0.5);
+  transition: color 150ms ease-in-out;
+}
+
+.cart_remove-item:hover {
+  text-decoration: underline;
+  color: rgba(51, 51, 51, 0.8);
+}
+
+/* right side styles */
+.cart_item-right {
+  width: 30%;
+  max-width: 200px;
+}
+
+.cart_item-right img {
+  object-fit: contain;
+  width: 100%;
+  height: 265px;
+}
+
+/* CART TOTALS STYLES */
+.cart_total-price,
+.cart_total-items {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1.25rem;
+}
+
+.cart_total-items > span,
+.cart_total-price > span {
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(30, 144, 250, 0.8);
+}

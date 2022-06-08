@@ -1,0 +1,41 @@
+.header {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* NAV BRAND STYLES  */
+.header_brand {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+/* CART BUTTON STYLES */
+.header_cart {
+  font-size: 1rem;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: dodgerblue;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: white;
+  border: solid 2px dodgerblue;
+  border-radius: 10px;
+  transition: all 150ms ease-in;
+  cursor: pointer;
+}
+
+.header_cart:hover {
+  background-color: dodgerblue;
+  color: white;
+}

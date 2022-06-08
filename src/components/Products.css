@@ -1,0 +1,73 @@
+.products {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.products_category {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #444;
+  margin: 0 0 2rem;
+}
+
+/* PRODUCTS LOADING TEXT STYLES */
+.products_loading {
+  width: 300px;
+  margin: 4rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products_loading-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: dodgerblue;
+  opacity: 0.8;
+  padding: 2rem;
+}
+
+/* FILTER BUTTONS STYLES */
+.products_filter {
+  width: 90vw;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products_filter-option {
+  font-size: 1rem;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #333;
+  display: inline-block;
+  padding: 1.25rem 2rem;
+  background: white;
+  border: none;
+  border-bottom: solid 2px #eee;
+  transition: all 150ms ease-in;
+  cursor: pointer;
+}
+.products_filter-option:not(:last-child) {
+  border-right: solid 2px #eee;
+}
+
+.products_filter-option:hover {
+  color: dodgerblue;
+  border-bottom-color: dodgerblue;
+}
+
+/* PRODUCTS CONTAINER STYLES */
+.products_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+}
