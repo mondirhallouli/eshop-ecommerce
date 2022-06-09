@@ -72,9 +72,9 @@
 
 /* item price styles */
 .cart_item-price {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   color: rgba(30, 144, 250, 0.8);
   margin-bottom: 1.25rem;
 }
@@ -123,6 +123,7 @@
 
 .cart_total-items > span,
 .cart_total-price > span {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-weight: 600;
   color: rgba(30, 144, 250, 0.8);
