@@ -1,0 +1,83 @@
+.product {
+  margin: 4rem auto;
+}
+
+/* PRODUCT CONTAINER */
+.product_container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* PRODUCT IMAGE */
+.product_img {
+  width: 100vw;
+  max-width: 40vw;
+}
+
+.product_img img {
+  object-fit: contain;
+  width: 100%;
+  height: 500px;
+}
+
+/* PRODUCT DETAILS */
+.product_details {
+  width: 100vw;
+  max-width: 50vw;
+}
+
+.product_category {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.product_name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 1rem;
+}
+
+.product_price {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: rgba(30, 144, 250, 0.8);
+  margin-bottom: 1.25rem;
+}
+
+.product_desc {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.product_add {
+  display: block;
+  width: 200px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  border: solid 1px #333;
+  background-color: white;
+  transition: background 150ms ease-in-out;
+}
+
+.product_add:hover {
+  background-color: #333;
+  color: white;
+}
