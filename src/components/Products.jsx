@@ -5,16 +5,25 @@ import ProductCard from "./ProductCard";
 import "./Products.css";
 
 function Products() {
-  let [products, setProducts] = useState(null);
+  let [products, setProducts] = useState([]);
   let [loading, setLoading] = useState(false);
+  let [filtered, setFiltered] = useState(products);
   let componentMounted = true;
+
+  let getCategory = (cat) => {
+    let updatedProducts = products.filter(
+      (product) => product.category === cat
+    );
+    setFiltered(updatedProducts);
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
       let response = await fetch("https://fakestoreapi.com/products");
       if (componentMounted) {
-        setProducts(await response.json());
+        setProducts(await response.clone().json());
+        setFiltered(await response.json());
         setLoading(false);
       }
 
@@ -44,16 +53,41 @@ function Products() {
     <div className="products">
       <h1 className="products_category">Latest products</h1>
       <nav className="products_filter">
-        <button className="products_filter-option">All</button>
-        <button className="products_filter-option">Men's Clothing</button>
-        <button className="products_filter-option">Women's Clothing</button>
-        <button className="products_filter-option">Jewelery</button>
-        <button className="products_filter-option">Electronics</button>
+        <button
+          className="products_filter-option"
+          onClick={() => setFiltered(products)}
+        >
+          All
+        </button>
+        <button
+          className="products_filter-option"
+          onClick={() => getCategory("men's clothing")}
+        >
+          Men's Clothing
+        </button>
+        <button
+          className="products_filter-option"
+          onClick={() => getCategory("women's clothing")}
+        >
+          Women's Clothing
+        </button>
+        <button
+          className="products_filter-option"
+          onClick={() => getCategory("jewelery")}
+        >
+          Jewelery
+        </button>
+        <button
+          className="products_filter-option"
+          onClick={() => getCategory("electronics")}
+        >
+          Electronics
+        </button>
       </nav>
       {loading && <Loading />}
       <section className="products_container">
-        {products &&
-          products.map((product) => (
+        {filtered &&
+          filtered.map((product) => (
             <ProductCard
               id={product.id}
               title={product.title}
