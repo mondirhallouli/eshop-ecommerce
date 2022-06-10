@@ -1,7 +1,7 @@
 .products {
   width: 90vw;
   max-width: 1200px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 8rem;
 }
 
 .products_category {
@@ -9,7 +9,7 @@
   font-weight: 400;
   font-size: 2rem;
   color: #444;
-  margin: 0 0 2rem;
+  margin: 0 0 3rem;
 }
 
 /* PRODUCTS LOADING TEXT STYLES */
@@ -34,7 +34,7 @@
 .products_filter {
   width: 90vw;
   max-width: 750px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 3rem;
   display: flex;
   justify-content: center;
   align-items: center;

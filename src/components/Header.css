@@ -1,7 +1,7 @@
 .header {
   width: 90vw;
   max-width: 1200px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
@@ -12,12 +12,19 @@
 
 /* NAV BRAND STYLES  */
 .header_brand {
+  width: 40px;
+  height: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: dodgerblue;
+  color: #1e90ff;
+}
+
+.header_brand img {
+  width: 100%;
+  height: auto;
 }
 
 /* CART BUTTON STYLES */
