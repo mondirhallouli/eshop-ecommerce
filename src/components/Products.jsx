@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+// spinner
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { TailSpin } from "react-loader-spinner";
+
 import ProductCard from "./ProductCard";
 import "./Products.css";
 
@@ -10,6 +12,7 @@ function Products() {
   let [filtered, setFiltered] = useState(products);
   let componentMounted = true;
 
+  // function used to filter by category on category btns
   let getCategory = (cat) => {
     let updatedProducts = products.filter(
       (product) => product.category === cat
@@ -17,16 +20,21 @@ function Products() {
     setFiltered(updatedProducts);
   };
 
+  // fetching the products from the API
   useEffect(() => {
     const fetchProducts = async () => {
+      // setting the loading state to true to display a spinner
       setLoading(true);
       let response = await fetch("https://fakestoreapi.com/products");
       if (componentMounted) {
+        // cloning the data to the products state variable to use it later when we need to display all products after filtering
         setProducts(await response.clone().json());
+        // giving the data to the filtered state variable to use it when we filter products per category
         setFiltered(await response.json());
         setLoading(false);
       }
 
+      // setting the componentMounted to false when the component unmounts to stop background fetching
       return () => {
         componentMounted = false;
       };
@@ -35,6 +43,7 @@ function Products() {
     fetchProducts();
   }, []);
 
+  // loading component (spinner and text)
   function Loading() {
     return (
       <div className="products_loading">
@@ -51,6 +60,7 @@ function Products() {
 
   return (
     <div className="products">
+      {/* PRODUCTS CATEGORIES */}
       <h1 className="products_category">Latest products</h1>
       <nav className="products_filter">
         <button
@@ -84,7 +94,9 @@ function Products() {
           Electronics
         </button>
       </nav>
+      {/* LOADING STATE */}
       {loading && <Loading />}
+      {/* PRODUCTS CONTAINER */}
       <section className="products_container">
         {filtered &&
           filtered.map((product) => (

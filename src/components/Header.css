@@ -29,20 +29,32 @@
 
 /* CART BUTTON STYLES */
 .header_cart {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.header_cart img {
+  width: 100%;
+  height: auto;
+}
+
+.header_cart-count {
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  position: absolute;
+  top: 0;
+  right: -0.5625rem;
   font-size: 1rem;
   font-family: Arial, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  color: dodgerblue;
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: white;
-  border: solid 2px dodgerblue;
-  border-radius: 10px;
-  transition: all 150ms ease-in;
-  cursor: pointer;
-}
-
-.header_cart:hover {
-  background-color: dodgerblue;
+  text-align: center;
   color: white;
 }

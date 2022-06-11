@@ -7,15 +7,18 @@ import { addToCart } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
 
 function Product() {
+  // react router hook to access URL parameters
   const { productId } = useParams();
   let [product, setProduct] = useState(null);
   let [loading, setLoading] = useState(false);
   let componentMounted = true;
+  // redux distpatch hook to dispatch actions
   const dispatch = useDispatch();
 
   //   fetching the product details from the API
   useEffect(() => {
     const fetchProduct = async () => {
+      // set the loading state to true to display a spinner
       setLoading(true);
       let response = await fetch(
         `https://fakestoreapi.com/products/${productId}`
@@ -25,12 +28,14 @@ function Product() {
         setLoading(false);
       }
 
+      // change variable to false when the component unmounts to stop background fetching
       return () => {
         componentMounted = false;
       };
     };
 
     fetchProduct();
+    // we want to perform the effect whenever the product ID changes (i.e. product changes)
   }, [productId]);
 
   //   adding the product to the cart
@@ -49,6 +54,7 @@ function Product() {
 
   return (
     <div className="product">
+      {/* LOADING STATE SPINNER  */}
       {loading && (
         <div className="products_loading">
           <TailSpin
@@ -60,6 +66,7 @@ function Product() {
           <p className="products_loading-text">Just a moment...</p>
         </div>
       )}
+      {/* PRODUCT DETAILS DISPLAY */}
       {product && (
         <div className="product_container">
           <div className="product_img">
